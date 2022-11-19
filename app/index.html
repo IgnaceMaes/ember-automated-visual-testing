@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EmberAutomatedVisualTesting</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-automated-visual-testing.css">
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/ember-automated-visual-testing.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<div class="calendar__day-cell">
+  {{#if this.isWeekend}}
+    <div class="calendar__event calendar__event--weekend"/>
+  {{else if @holidays}}
+    <div class="calendar__event calendar__event--holiday"/>
+  {{/if}}
+</div>

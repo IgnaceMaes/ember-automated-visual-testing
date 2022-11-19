@@ -1,0 +1,12 @@
+{{page-title "Holidays calendar"}}
+
+<section class="content">
+  <h1>Holidays Calendar</h1>
+  <Calendar
+    @month={{this.month}}
+    @users={{@model.users}}
+    @holidays={{@model.holidays}}
+  />
+</section>
+
+{{outlet}}

@@ -1,0 +1,37 @@
+<div class="calendar">
+  <div class="calendar__header">{{this.monthName}}</div>
+  <div class="calendar__container">
+    <div>
+      {{!-- Placeholder --}}
+      <div class="calendar__user-cell" />
+
+      {{#each @users as |user|}}
+        <div class="calendar__user-cell">
+          {{user.name}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="calendar__days">
+      <div class="calendar__row">
+        {{#each this.days as |day|}}
+          <CalendarHeaderCell
+            @day={{day}}
+          />
+        {{/each}}
+      </div>
+
+      {{#each @users as |user|}}
+        <div class="calendar__row">
+          {{#each this.days as |day|}}
+            <CalendarDayCell
+              @holidays={{get (get this.holidaysMatrix user.id) (get-date day)}}
+              @day={{day}}
+              @month={{@month}}
+            />
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
